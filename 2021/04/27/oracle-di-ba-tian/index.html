@@ -1,0 +1,1683 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Oracle第八天, Blog From Liuzhan">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Oracle第八天 | Blog From Liuzhan</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Blog From Liuzhan" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Blog From Liuzhan</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Blog From Liuzhan</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Oracle第八天</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/">
+                                <span class="chip bg-color">大数据第一阶段</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                大数据
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-27
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-28
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="2021-04-27-Oracle第八天"><a href="#2021-04-27-Oracle第八天" class="headerlink" title="2021/04/27 Oracle第八天"></a>2021/04/27 Oracle第八天</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天笔记对数值型函数和日期型函数做一个总结。</p>
+<h3 id="数值型函数"><a href="#数值型函数" class="headerlink" title="数值型函数"></a>数值型函数</h3><h4 id="1-取绝对值"><a href="#1-取绝对值" class="headerlink" title="1.取绝对值"></a>1.取绝对值</h4><p>ABS(NUM):获取数值NUM对应的绝对值。<br>该函数通常不直接对某数值进行取绝对值，而是对于一系列的计算结果获取绝对值。</p>
+<pre class=" language-shell"><code class="language-shell">SELECT ABS(3.45),ABS(-4.56) FROM DUAL;
+SELECT SAL,COMM,SAL-COMM,ABS(SAL-COMM) FROM EMP;
+SELECT ABS(5),ABS(-4) FROM DUAL;
+SELECT ABS('A'),ABS(-4) FROM DUAL;
+</code></pre>
+<h4 id="2-向上取整与向下取整"><a href="#2-向上取整与向下取整" class="headerlink" title="2.向上取整与向下取整"></a>2.向上取整与向下取整</h4><ul>
+<li>CEIL(NUM) ：向上取整，获取离NUM最近的两个整数中较大的那个数</li>
+<li>FLOOR(NUM)：向下取整，获取离NUM最近的两个整数中较小的那个数<pre class=" language-shell"><code class="language-shell">SELECT CEIL(2.56),FLOOR(2.56) FROM DUAL;
+SELECT CEIL(5),FLOOR(5) FROM DUAL;
+</code></pre>
+<h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5></li>
+</ul>
+<ol>
+<li>若NUM本身即为整数，则无论向上取整还是向下取整，返回结果都为NUM本身</li>
+<li>无论NUM是正数还是负数，所谓上，即数轴指向的方向，所谓下，即数轴背向的方向<pre class=" language-shell"><code class="language-shell">SELECT CEIL(-2.56),FLOOR(-2.56) FROM DUAL;
+</code></pre>
+</li>
+</ol>
+<p>SELECT CEIL(1.23,2),FLOOR(1.23,2) FROM DUAL;–参数个数无效<br>sELECT CEIL(‘1.2a5’),FLOOR(‘1.2a5’) FROM DUAL;–无效数字<br>SELECT CEIL(‘A’),FLOOR(‘A’) FROM DUAL;–无效数字</p>
+<pre><code>
+#### 3.取余
+MOD(X,Y)：X是被除数，Y是除数，计算Y整除X，获取计算结果中的余数。（不是商！不是商！不是商！）
+MOD函数对于纯数学范畴的使用很少，但智慧的程序员们却因此提出了“分库分表”的概念：
+将数据按照一定规则均分到不同的数据库（表）中，变串行为并行，以此来提高代码和程序的运行效率。
+```shell
+SELECT MOD(13,5) FROM DUAL;
+select * from STUDENT_ALL;
+
+SELECT STD_NO,CASE WHEN MOD(STD_NO,4)=0 THEN 'A'
+                   WHEN MOD(STD_NO,4)=1 THEN 'B'
+                   WHEN MOD(STD_NO,4)=2 THEN 'C'
+                   ELSE 'D'
+               END 
+  FROM STUDENT_ALL;
+</code></pre>
+<h4 id="4-四舍五入"><a href="#4-四舍五入" class="headerlink" title="4.四舍五入"></a>4.四舍五入</h4><p>ROUND(NUM[,P])：对数值NUM进行四舍五入，其中参数P决定了四舍五入的精度<br>基础用法</p>
+<pre class=" language-shell"><code class="language-shell">SELECT ROUND(5.6789,2),ROUND(5.4321,2) FROM DUAL;
+SELECT ROUND(12345.6789,1) FROM DUAL;
+</code></pre>
+<p>精度为0或者精度省略</p>
+<pre class=" language-shell"><code class="language-shell">SELECT ROUND(5.6789,0),ROUND(5.6789) FROM DUAL;
+</code></pre>
+<p>负数的四舍五入</p>
+<pre class=" language-shell"><code class="language-shell">SELECT ROUND(-5.4),ROUND(-5.6) FROM DUAL; 
+</code></pre>
+<p>精度为负数</p>
+<pre class=" language-shell"><code class="language-shell">SELECT ROUND(45.321,-1),ROUND(45.321,-2),ROUND(55.321,-2),ROUND(0055.321,-3) FROM DUAL;
+</code></pre>
+<p>精度不为整数</p>
+<pre class=" language-shell"><code class="language-shell">SELECT ROUND(5.4321,2.22222),ROUND(5.4321,2.99999) FROM DUAL;
+--按照整数位进行计算
+</code></pre>
+<h4 id="5-截断"><a href="#5-截断" class="headerlink" title="5.截断"></a>5.截断</h4><p>TRUNC(NUM[,P]) ：对数值NUM进行截断，其中参数P决定了截断的精度</p>
+<p>基础用法</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TRUNC(4.54321,2),TRUNC(4.56789,2) FROM DUAL;
+</code></pre>
+<p>精度为0或精度省略</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TRUNC(4.54321,0),TRUNC(4.54321) FROM DUAL;
+</code></pre>
+<p>负数的截取</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TRUNC(-1.4),TRUNC(-1.6) FROM DUAL;
+</code></pre>
+<p>精度为负数</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TRUNC(45.321,-1),TRUNC(045.321,-2),TRUNC(055.321,-2),TRUNC(0055.321,-3) FROM DUAL;
+</code></pre>
+<p>精度不为整数</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TRUNC(5.4321,2.22222),TRUNC(5.4321,2.99999) FROM DUAL;
+</code></pre>
+<h5 id="平方根"><a href="#平方根" class="headerlink" title="平方根"></a>平方根</h5><p>SQRT(num)一个参数,返回该参数的平方根</p>
+<pre class=" language-shell"><code class="language-shell">select sqrt(16) from dual;
+
+SELECT SQRT(0) FROM DUAL;
+
+SELECT SQRT(-4) FROM DUAL;
+
+SELECT SQRT(5) FROM DUAL;
+SELECT 1/3 FROM DUAL;
+SELECT 0.3333333333333336 FROM DUAL;
+</code></pre>
+<h5 id="POWER-X-Y-：幂指函数"><a href="#POWER-X-Y-：幂指函数" class="headerlink" title="POWER(X,Y)：幂指函数"></a>POWER(X,Y)：幂指函数</h5><pre class=" language-shell"><code class="language-shell">select power(3,3) from dual;
+select power(3,2) from dual;
+SELECT POWER(3,0) FROM DUAL;
+SELECT POWER(3,1) FROM DUAL;
+SELECT POWER(3,-1) FROM DUAL;
+</code></pre>
+<h3 id="1-关于日期的四舍五入与截断"><a href="#1-关于日期的四舍五入与截断" class="headerlink" title="1.关于日期的四舍五入与截断"></a>1.关于日期的四舍五入与截断</h3><h3 id="2-获取月份差值"><a href="#2-获取月份差值" class="headerlink" title="2.获取月份差值"></a>2.获取月份差值</h3><h3 id="3-获取月末日期"><a href="#3-获取月末日期" class="headerlink" title="3.获取月末日期"></a>3.获取月末日期</h3><h3 id="4-月份加减"><a href="#4-月份加减" class="headerlink" title="4.月份加减"></a>4.月份加减</h3><h3 id="5-获取下个周几"><a href="#5-获取下个周几" class="headerlink" title="5.获取下个周几"></a>5.获取下个周几</h3><p>关于日期的计算：日期直接加减一个整数，该数值以天为单位计算。</p>
+<pre class=" language-shell"><code class="language-shell">SELECT SYSDATE+5 FROM DUAL;
+</code></pre>
+<h4 id="1-关于日期的四舍五入与截断-1"><a href="#1-关于日期的四舍五入与截断-1" class="headerlink" title="1.关于日期的四舍五入与截断"></a>1.关于日期的四舍五入与截断</h4><p>ROUND() 函数与 TRUNC()函数<br>除了可以作用在数值上，也可以作用在日期上，对于日期也同样有四舍五入或截断的需求</p>
+<p>对于四舍五入，<br>在数值方面依靠数值5作为分界线，达不到5即被舍去，达到5即向前进1。</p>
+<p>在日期方面，四舍五入同样需要一个分界线，该分界线在不同的时间单位中并不相同，原则上是取居中的位置作为分界线。</p>
+<p>对于截断，日期的截断与数值的截断类似，定位到截取精度，直接舍弃精度之外的部分，留下精度之内的部分。</p>
+<hr>
+<h5 id="省略精度，即默认的精确到天，天的界限12-00"><a href="#省略精度，即默认的精确到天，天的界限12-00" class="headerlink" title="省略精度，即默认的精确到天，天的界限12:00"></a>省略精度，即默认的精确到天，天的界限12:00</h5><pre class=" language-shell"><code class="language-shell">SELECT SYSDATE,ROUND(SYSDATE,'DD') FROM DUAL; 
+
+
+
+SELECT  TO_DATE('20201007 11:59:59','YYYYMMDD HH24:MI:SS'),
+        ROUND(TO_DATE('20201007 11:59:59','YYYYMMDD HH24:MI:SS'),'DD'), 
+        ROUND(TO_DATE('20201007 12:00:00','YYYYMMDD HH24:MI:SS'),'DD'), 
+        ROUND(TO_DATE('20201007 12:00:01','YYYYMMDD HH24:MI:SS'),'DD'), 
+        ROUND(TO_DATE('20201031 12:00:01','YYYYMMDD HH24:MI:SS'),'DD'), 
+        ROUND(TO_DATE('20201231 12:00:01','YYYYMMDD HH24:MI:SS'),'DD') 
+  FROM DUAL; 
+</code></pre>
+<h5 id="年的界限：7月"><a href="#年的界限：7月" class="headerlink" title="年的界限：7月"></a>年的界限：7月</h5><pre class=" language-shell"><code class="language-shell">SELECT SYSDATE,ROUND(SYSDATE,'YYYY'),TRUNC(SYSDATE,'YYYY') FROM DUAL;
+
+SELECT TO_DATE('20200630','YYYYMMDD'),
+       ROUND(TO_DATE('20200630','YYYYMMDD'),'YYYY'),
+       TRUNC(TO_DATE('20200630','YYYYMMDD'),'YYYY'),
+       ROUND(TO_DATE('20200701','YYYYMMDD'),'YYYY'),
+       TRUNC(TO_DATE('20200701','YYYYMMDD'),'YYYY')  
+  FROM DUAL;
+</code></pre>
+<h5 id="月的界限：16日"><a href="#月的界限：16日" class="headerlink" title="月的界限：16日"></a>月的界限：16日</h5><pre class=" language-shell"><code class="language-shell">SELECT SYSDATE,ROUND(SYSDATE,'MM'),TRUNC(SYSDATE,'MM') FROM DUAL;
+
+SELECT TO_DATE('20201015','YYYYMMDD'),
+       ROUND(TO_DATE('20201015','YYYYMMDD'),'MM'),
+       ROUND(TO_DATE('20201016','YYYYMMDD'),'MM'),
+       ROUND(TO_DATE('20201017','YYYYMMDD'),'MM')  
+  FROM DUAL;
+</code></pre>
+<h5 id="思考2月的界限？"><a href="#思考2月的界限？" class="headerlink" title="思考2月的界限？"></a>思考2月的界限？</h5><pre class=" language-shell"><code class="language-shell">SELECT TO_DATE('20200215','YYYYMMDD'),
+       ROUND(TO_DATE('20200215','YYYYMMDD'),'MM'),
+       ROUND(TO_DATE('20200216','YYYYMMDD'),'MM'),
+       ROUND(TO_DATE('20200217','YYYYMMDD'),'MM')  
+  FROM DUAL;
+</code></pre>
+<h5 id="季的界限：中间月份的16日"><a href="#季的界限：中间月份的16日" class="headerlink" title="季的界限：中间月份的16日"></a>季的界限：中间月份的16日</h5><pre class=" language-shell"><code class="language-shell">SELECT SYSDATE,ROUND(SYSDATE,'Q'),TRUNC(SYSDATE,'Q') FROM DUAL;
+SELECT TO_DATE('20201115','YYYYMMDD'),
+       ROUND(TO_DATE('20201115','YYYYMMDD'),'Q'),
+       ROUND(TO_DATE('20201116','YYYYMMDD'),'Q'),
+       ROUND(TO_DATE('20201117','YYYYMMDD'),'Q')  
+  FROM DUAL;
+  
+SELECT TO_DATE('20200215','YYYYMMDD'),
+       ROUND(TO_DATE('20200215','YYYYMMDD'),'Q'),
+       ROUND(TO_DATE('20200216','YYYYMMDD'),'Q'),
+       ROUND(TO_DATE('20200217','YYYYMMDD'),'Q')  
+  FROM DUAL;
+</code></pre>
+<h5 id="小时的界限：30分"><a href="#小时的界限：30分" class="headerlink" title="小时的界限：30分"></a>小时的界限：30分</h5><pre class=" language-shell"><code class="language-shell">SELECT SYSDATE,ROUND(SYSDATE,'HH24'),TRUNC(SYSDATE,'HH24') FROM DUAL;
+
+
+SELECT TO_DATE('20201007 15:29:59','YYYYMMDD HH24:MI:SS'),
+  ROUND(TO_DATE('20201007 15:29:59','YYYYMMDDHH24:MI:SS'),'HH24'),
+  ROUND(TO_DATE('20201007 15:30:00','YYYYMMDD HH24:MI:SS'),'HH24'),
+  ROUND(TO_DATE('20201007 15:31:00','YYYYMMDD HH24:MI:SS'),'HH24')
+FROM DUAL;
+</code></pre>
+<h5 id="星期的界限"><a href="#星期的界限" class="headerlink" title="星期的界限"></a>星期的界限</h5><p>星期用哪个关键词：iw DAY<br>星期如何清零<br>星期的界限在哪</p>
+<pre class=" language-shell"><code class="language-shell">       清零                     界限
+
+IW  :  星期一              星期四 12点
+DAY :  星期日              星期三 12点
+DY  :  星期日              星期三 12点
+</code></pre>
+<h6 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h6><pre class=" language-shell"><code class="language-shell">
+SELECT SYSDATE,ROUND(SYSDATE,'day') FROM DUAL;
+
+SELECT ROUND(TO_DATE('20201008 11:59:59','YYYYMMDD HH24:MI:SS'),'IW'), 
+       ROUND(TO_DATE('20201008 12:00:00','YYYYMMDD HH24:MI:SS'),'IW')
+  FROM DUAL;
+  
+  
+  
+SELECT SYSDATE,ROUND(SYSDATE,'DAY') FROM DUAL;
+
+SELECT TO_DATE('20201007','YYYYMMDD'),
+       ROUND(TO_DATE('20201007 11:59:59','YYYYMMDD HH24:MI:SS'),'DAY'),
+       ROUND(TO_DATE('20201007 12:00:00','YYYYMMDD HH24:MI:SS'),'DAY')
+  FROM DUAL;
+ 
+ 
+SELECT TO_CHAR(TO_DATE('20201007','YYYYMMDD'),'YYYYMMDD HH24:MI:SS'),
+       ROUND(TO_DATE('20201007','YYYYMMDD'),'DAY'),
+       ROUND(TO_DATE('20201007','YYYYMMDD'),'DAY')
+  FROM DUAL;
+</code></pre>
+<h4 id="2-获取月份差值-1"><a href="#2-获取月份差值-1" class="headerlink" title="2.获取月份差值"></a>2.获取月份差值</h4><p>MONTHS_BETWEEN(d1,d2) :求D1和D2之间相差几个月（d1&gt;d2）</p>
+<p>常规用法：给定两个日期求两日期之间的月份差</p>
+<ol>
+<li><p>计算从元旦到今天经过了几个月（非整数月）</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TRUNC(MONTHS_BETWEEN(TRUNC(SYSDATE,'DD'),TO_DATE('20210101','YYYYMMDD'))) FROM DUAL;
+SELECT 26/31 FROM DUAL;
+</code></pre>
+</li>
+<li><p>计算从元旦到今天经过了几个月（整数月）</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TRUNC(MONTHS_BETWEEN(TRUNC(SYSDATE,'DD'),TO_DATE('20210101','YYYYMMDD'))) FROM DUAL;
+</code></pre>
+</li>
+</ol>
+<p>SELECT ABS(TRUNC(MONTHS_BETWEEN(TO_DATE(‘20210101’,’YYYYMMDD’),TRUNC(SYSDATE,’DD’)))) FROM DUAL;</p>
+<p>SELECT TRUNC(SYSDATE,’MM’),MONTHS_BETWEEN(TRUNC(SYSDATE,’MM’),TO_DATE(‘20210101’,’YYYYMMDD’)) FROM DUAL;</p>
+<p>SELECT MONTHS_BETWEEN(TO_DATE(‘20210430’,’YYYYMMDD’),TO_DATE(‘20210228’,’YYYYMMDD’)) FROM DUAL;</p>
+<pre><code>
+
+3. 计算从今天到明年元旦还要等待几个月（整数月）
+```shell
+</code></pre>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h4><p>1）一般工作中使用到的情况是，给定两个月初或月末日期、或者两个DD相同的日期。<br>如果给定的两个日期DD不相同，月份差会得到非整数，小数部分为剩余天数/31，这个规则无论针对哪一个月都是如此；<br>2）如果给定的两个日期DD不同，但是想要获得整数月，可以配合TRUNC函数或后续提<br>到的获取月末日期函数使用；<br>3）如果两个日期的DD不同，但是都是月末日期，则获取的月份差将是整数；<br>4）需要特别注意，函数中录入的两个日期是有大小之分的（区别BETWEEN  AND），一般晚的日期在前，早的日期在后，如此得到的结果便是正数，<br>反之获得负数。如果不确定两个日期的大小，可搭配ABS()函数使用。</p>
+<h4 id="3-获取月末日期-1"><a href="#3-获取月末日期-1" class="headerlink" title="3.获取月末日期"></a>3.获取月末日期</h4><p>LAST_DAY(D)：获取指定日期对应的当月最后一天，即月末日期</p>
+<pre class=" language-shell"><code class="language-shell">SELECT LAST_DAY(SYSDATE) FROM DUAL;
+</code></pre>
+<p>举例：<br>获取当月最后一天。</p>
+<pre class=" language-shell"><code class="language-shell">SELECT LAST_DAY(SYSDATE) FROM DUAL;
+</code></pre>
+<p>查询某月份的最大天数</p>
+<pre class=" language-shell"><code class="language-shell">SELECT LAST_DAY(SYSDATE+30) FROM DUAL;
+
+SELECT TO_CHAR(LAST_DAY(SYSDATE+30),'DD') FROM DUAL;
+</code></pre>
+<p>获取给定两日期的月份差（整数月）</p>
+<pre class=" language-shell"><code class="language-shell">SELECT MONTHS_BETWEEN(LAST_DAY(TO_DATE('20210415','YYYYMMDD')),LAST_DAY(TO_DATE('20210202','YYYYMMDD'))) FROM DUAL;
+</code></pre>
+<p>查询某日期对应的年份是平年还是闰年</p>
+<pre class=" language-shell"><code class="language-shell">--通过判断2月的最后一天判断平年闰年
+SELECT  DDDD,R,CASE WHEN TO_CHAR(LAST_DAY(TO_DATE(SUBSTR(DDDD,1,4)||'0205','YYYYMMDD')),'DD')='29'
+             THEN '闰年'
+             else '平年'
+         END
+   FROM DAY_TEST;
+</code></pre>
+<p>SELECT * FROM DAY_TEST FOR UPDATE;</p>
+<pre class=" language-shell"><code class="language-shell">--通过判断全年的最后一天判断平年或闰年
+SELECT DDDD,R,CASE WHEN TO_CHAR(TO_DATE(SUBSTR(DDDD,1,4)||'1231','YYYYMMDD'),'DDD')=366
+                   THEN '闰年'
+                   ELSE '平年'
+                END
+  FROM DAY_TEST;
+</code></pre>
+<pre class=" language-shell"><code class="language-shell">--通过年份判断平年或闰年
+SELECT DDDD,R,CASE WHEN MOD(SUBSTR(DDDD,1,4),4)=0 AND MOD(SUBSTR(DDDD,1,4),100)<>0
+                        OR MOD(SUBSTR(DDDD,1,4),400)=0
+                   THEN '闰年'
+                   ELSE '平年'
+                END
+   FROM DAY_TEST;
+</code></pre>
+<h4 id="4-月份加减-1"><a href="#4-月份加减-1" class="headerlink" title="4.月份加减"></a>4.月份加减</h4><p>ADD_MONTHS(D,N) :在D日期的基础上加N个月。N可为正可为负。<br>基础用法：</p>
+<pre class=" language-shell"><code class="language-shell">SELECT SYSDATE,ADD_MONTHS(SYSDATE,2) FROM DUAL;
+</code></pre>
+<p>N为负数即为在D日期的基础上减去几个月</p>
+<pre class=" language-shell"><code class="language-shell">SELECT SYSDATE+2,ADD_MONTHS(SYSDATE+2,-2) FROM DUAL;
+</code></pre>
+<h4 id="特殊情况："><a href="#特殊情况：" class="headerlink" title="特殊情况："></a>特殊情况：</h4><p>1）如果N是小数–以整数部分计算</p>
+<pre class=" language-shell"><code class="language-shell">SELECT SYSDATE,ADD_MONTHS(SYSDATE,2.5) FROM DUAL;
+</code></pre>
+<p>2）如果DD是月末</p>
+<pre class=" language-shell"><code class="language-shell">SELECT SYSDATE+2,ADD_MONTHS(SYSDATE+2,1) FROM DUAL;
+</code></pre>
+<p>3）如果DD不在计算后的月份中</p>
+<pre class=" language-shell"><code class="language-shell">SELECT SYSDATE+2,ADD_MONTHS(SYSDATE+2,-2) FROM DUAL;
+</code></pre>
+<p>例题：查询比SMITH早入职两个月的员工信息</p>
+<pre class=" language-shell"><code class="language-shell">SELECT * FROM EMP WHERE HIREDATE=ADD_MONTHS((SELECT HIREDATE FROM EMP WHERE ENAME='KING'),2)
+</code></pre>
+<p>思考：<br>返回日期对应的当月第一天</p>
+<pre class=" language-shell"><code class="language-shell">--1.截断
+SELECT DDD,TRUNC(DDD,'MM') FROM DAY_TEST;  --主要针对日期
+</code></pre>
+<pre class=" language-shell"><code class="language-shell">--2.截取+连接
+SELECT DDDD,SUBSTR(DDDD,1,7)||'/01' FROM DAY_TEST;  --主要针对字符
+</code></pre>
+<h4 id="5-获取下个周几-1"><a href="#5-获取下个周几-1" class="headerlink" title="5.获取下个周几"></a>5.获取下个周几</h4><p>NEXT_DAY (D,W)：给定日期D，和星期W，获取D日期之后的下一个星期W</p>
+<pre class=" language-shell"><code class="language-shell">SELECT TO_DATE('20210428','YYYYMMDD'),
+       NEXT_DAY(TO_DATE('20210428','YYYYMMDD'),'星期五') 
+  FROM DUAL;
+</code></pre>
+<h5 id="思考题："><a href="#思考题：" class="headerlink" title="思考题："></a>思考题：</h5><p>给定任意日期，如何获取下个周的星期五</p>
+<pre class=" language-shell"><code class="language-shell">SELECT NEXT_DAY(TO_DATE('20210428', 'YYYYMMDD'),'星期五')+7 from DUAL;
+SELECT NEXT_DAY(TRUNC(TO_DATE('20210426', 'YYYYMMDD'),'IW')+7,'星期五') from DUAL;
+</code></pre>
+<p>给定任意日期，如何获取下个周的星期几</p>
+<pre class=" language-shell"><code class="language-shell">SELECT NEXT_DAY(TRUNC(TO_DATE('20210426', 'YYYYMMDD'),'IW')+6,'星期一') from DUAL;
+</code></pre>
+<h3 id="其他函数"><a href="#其他函数" class="headerlink" title="其他函数"></a>其他函数</h3><h4 id="1-条件取值"><a href="#1-条件取值" class="headerlink" title="1.条件取值"></a>1.条件取值</h4><p>DECODE(EXPR,VALUE1,RESULT1,VALUE2,RESULT2,…,DEF_RESULT)</p>
+<p>其实效果即等同于</p>
+<pre class=" language-shell"><code class="language-shell">CASE  EXPR
+     WHEN VALUE1  THEN RESULT1
+     WHEN VALUE2  THEN RESULT2
+          …
+    ELSE DEF_RESULT
+ END
+</code></pre>
+<p>举例：<br>使用decode函数，职位是分析员的，工资+1000；职位是经理的，工资+800；<br>职位是其它的，工资+400</p>
+<pre class=" language-shell"><code class="language-shell">SELECT DECODE(JOB,'ANALYST',SAL+1000,'MANAGER',SAL+800,SAL+400) FROM EMP;
+</code></pre>
+<pre class=" language-shell"><code class="language-shell">SELECT * FROM EMP;
+SELECT CASE JOB
+            WHEN 'ANALYST' THEN SAL+1000
+            WHEN 'MANAGER' THEN SAL+800
+            ELSE SAL+400
+        END
+   FROM EMP;
+</code></pre>
+<h4 id="2-空值的赋值"><a href="#2-空值的赋值" class="headerlink" title="2.空值的赋值"></a>2.空值的赋值</h4><p>NVL(EXPR,VALUE):如果EXPR是空，返回一个VALUE，如果EXPR不为空，返回EXPR本身</p>
+<pre class=" language-shell"><code class="language-shell">SELECT COMM,NVL(COMM,0) FROM EMP;
+SELECT COMM+SAL,NVL(COMM+SAL,0) FROM EMP;
+SELECT NVL(NULL,'AAA') FROM DUAL;
+SELECT NVL(NULL,SYSDATE) FROM DUAL;
+</code></pre>
+<p>NVL2(EXPR1,EXPR2,EXPR3):expr1不为NULL，返回expr2；expr1为NULL，返回expr3</p>
+<pre class=" language-shell"><code class="language-shell">SELECT NVL2(SAL+COMM,SAL+COMM,SAL)FROM EMP;
+</code></pre>
+<h4 id="3-去重"><a href="#3-去重" class="headerlink" title="3.去重"></a>3.去重</h4><pre class=" language-shell"><code class="language-shell">DISTINCT COL_LIST   :
+SELECT DISTINCT COL_LIST FROM TB_NAME …
+</code></pre>
+<p>对COL_LIST范围内的字段进行去重</p>
+<p>举例（以下查询结果全部要求去重）：</p>
+<p>获取公司的所有岗位</p>
+<pre class=" language-shell"><code class="language-shell">SELECT DISTINCT JOB FROM EMP;
+</code></pre>
+<p>获取公司的所有部门</p>
+<pre class=" language-shell"><code class="language-shell">SELECT DISTINCT DEPTNO FROM EMP;
+</code></pre>
+<p>获取各部门的各岗位</p>
+<pre class=" language-shell"><code class="language-shell">SELECT DISTINCT DEPTNO,JOB FROM EMP;
+
+SELECT DEPTNO,JOB FROM EMP GROUP BY DEPTNO,JOB;
+
+SELECT DEPTNO FROM EMP GROUP BY DEPTNO;
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">刘展</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://codeliuzhan.cn/2021/04/27/oracle-di-ba-tian/">http://codeliuzhan.cn/2021/04/27/oracle-di-ba-tian/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">刘展</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/">
+                                    <span class="chip bg-color">大数据第一阶段</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/04/28/oracle-di-jiu-tian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Oracle第九天">
+                        
+                        <span class="card-title">Oracle第九天</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                    大数据
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/">
+                        <span class="chip bg-color">大数据第一阶段</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/26/oracle-di-qi-tian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Oracle第七天">
+                        
+                        <span class="card-title">Oracle第七天</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                    大数据
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/">
+                        <span class="chip bg-color">大数据第一阶段</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Blog From Liuzhan<br />'
+            + '文章作者: 刘展<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">刘展</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">128.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action" target="_blank">鲁ICP备20029325号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/codeliuzhan" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:liuzhan1999@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1985730401" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1985730401" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "6655edc5"
+        });
+        daovoice('update');
+    </script>
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
